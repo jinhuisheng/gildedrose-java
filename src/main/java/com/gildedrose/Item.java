@@ -8,7 +8,7 @@ public class Item {
 
     public int quality;
 
-    protected Item(String name, int sellIn, int quality) {
+    public Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;
         this.quality = quality;
@@ -19,9 +19,9 @@ public class Item {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
-    protected void passOneDay() {
-        decreaseSellIn();
+    public void passOneDay() {
         updateQuality();
+        decreaseSellIn();
     }
 
     protected void updateQuality() {
@@ -38,7 +38,7 @@ public class Item {
     }
 
     protected boolean isExpired() {
-        return sellIn < 0;
+        return sellIn <= 0;
     }
 
     protected void decreaseSellIn() {

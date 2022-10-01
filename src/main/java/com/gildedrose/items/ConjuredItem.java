@@ -9,10 +9,14 @@ public class ConjuredItem extends Item {
 
     @Override
     protected void updateQuality() {
-        decreaseQuality();
-        decreaseQuality();
+        decreaseQuantityDouble();
         if (isExpired()) {
-            decreaseQuality();
+            decreaseQuantityDouble();
         }
+    }
+
+    private void decreaseQuantityDouble() {
+        decreaseQuality();
+        decreaseQuality();
     }
 }
