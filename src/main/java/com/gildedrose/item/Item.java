@@ -39,7 +39,7 @@ public class Item {
         return sellIn <= 0;
     }
 
-    private void decreaseQuality() {
+    void decreaseQuality() {
         if (quality > 0) {
             quality = quality - 1;
         }

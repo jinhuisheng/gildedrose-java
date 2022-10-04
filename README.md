@@ -49,3 +49,10 @@
   距离演出小于5天，每天更新，sellIn减1，quality加3
   距离演出小于5天，每天更新，quality不会超过50
   距离演出等于0天，每天更新，sellIn减1，quality置为0
+
+
+* 魔法召唤（Conjured）
+  未过保，每天更新，sellIn和quality都减2
+  未过保，每天更新，quality不会小于0
+  已过保，每天更新，quality减4
+  已过保，每天更新，每天更新，quality不会小于0

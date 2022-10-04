@@ -1,9 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.item.AgedItem;
-import com.gildedrose.item.BackstageItem;
-import com.gildedrose.item.Item;
-import com.gildedrose.item.SulfurasItem;
+import com.gildedrose.item.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -30,7 +27,7 @@ public class TexttestFixture {
                 new BackstageItem(5, 49),
                 new BackstageItem(1, 20),
                 // this conjured item does not work properly yet
-                new Item("Conjured Mana Cake", 3, 6)};
+                new ConjuredItem(3, 6)};
 
         GildedRose app = new GildedRose(items);
 
