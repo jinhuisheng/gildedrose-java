@@ -8,10 +8,10 @@ public class BackstageItem extends Item {
     @Override
     protected void updateQuality() {
         increaseQuality();
-        if (isTenDaysBefore()) {
+        if (isRemainingTenDays()) {
             increaseQuality();
         }
-        if (isFiveDaysBefore()) {
+        if (isRemainingFiveDays()) {
             increaseQuality();
         }
         if (isExpired()) {
@@ -19,11 +19,11 @@ public class BackstageItem extends Item {
         }
     }
 
-    private boolean isFiveDaysBefore() {
+    private boolean isRemainingFiveDays() {
         return sellIn < 6;
     }
 
-    private boolean isTenDaysBefore() {
+    private boolean isRemainingTenDays() {
         return sellIn < 11;
     }
 

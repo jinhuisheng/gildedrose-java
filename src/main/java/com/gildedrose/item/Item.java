@@ -20,8 +20,8 @@ public class Item {
     }
 
     public void passOneDay() {
-        updateSellIn();
         updateQuality();
+        updateSellIn();
     }
 
     protected void updateQuality() {
@@ -36,7 +36,7 @@ public class Item {
     }
 
     protected boolean isExpired() {
-        return sellIn < 0;
+        return sellIn <= 0;
     }
 
     private void decreaseQuality() {
